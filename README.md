@@ -19,7 +19,8 @@ Denne stump kode fortæller surveyxact at nu er en iframe* klar til at gå vider
 
 _Gå til Rediger i QuickQuestPlus og vælg Indsæt/Redigere Tekst og skriv:_
 
-```&lt;script&gt;
+```html
+<script>
 window.addEventListener("message", (event) => {
             try {
                 // Tjek om message er fra iframe
@@ -34,13 +35,13 @@ window.addEventListener("message", (event) => {
                 console.error(e.message);
             }
         });
-&lt;/script&gt;
+</script>
 ```
 
 
 ### Vis element basert på om en checkbox er sat.
-```
-&lt;script&gt;
+```html
+<script>
  
 checkbox = document.getElementById('ch_1748233319-1748233321'); // Brug her id for checkboxen der skal overvåges!
  
@@ -55,4 +56,4 @@ iframe[0].style.display = 'block';
   }
 });
  
-&lt;/script&gt;
+</script>

@@ -24,7 +24,11 @@ window.addEventListener("message", (event) => {
             try {
                 // Tjek om message er fra iframe
                 if (event.data.type === "doneCallback") {
-                    document.getElementsByClassName("page1")[0].getElementsByClassName("navigation-buttons")[0].style.display = "flex"
+                    document.getElementsByClassName("page1")[0].getElementsByClassName("navigation-buttons")[0].style.display = "flex";
+                    // Nedestående kan automatisk sende brugeren videre, hvis det er ukommenteret.
+                    //document.getElementsByClassName("next-button");
+                    //console.log(‘map finished’);
+                    //collection[‘next’].click()
                 }
             } catch (e) {
                 console.error(e.message);
@@ -32,3 +36,23 @@ window.addEventListener("message", (event) => {
         });
 &lt;/script&gt;
 ```
+
+
+### Vis element basert på om en checkbox er sat.
+```
+&lt;script&gt;
+ 
+checkbox = document.getElementById('ch_1748233319-1748233321'); // Brug her id for checkboxen der skal overvåges!
+ 
+checkbox.addEventListener('change', function() {
+  if (this.checked) {
+    console.log("Checkbox is checked..");
+   iframe = document.getElementsByTagName('iframe');
+   iframe[0].style.display = 'none';
+  } else {
+    console.log("Checkbox is not checked..");
+iframe[0].style.display = 'block';
+  }
+});
+ 
+&lt;/script&gt;

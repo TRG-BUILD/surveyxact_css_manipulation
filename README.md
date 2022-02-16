@@ -48,11 +48,15 @@ checkbox = document.getElementById('ch_1748233319-1748233321'); // Brug her id f
 checkbox.addEventListener('change', function() {
   if (this.checked) {
     console.log("Checkbox is checked..");
-   iframe = document.getElementsByTagName('iframe');
-   iframe[0].style.display = 'none';
+    iframe = document.getElementsByTagName('iframe');
+    document.getElementsByClassName("page1")[0].getElementsByClassName("navigation-buttons")[0].style.display = "flex";
+    iframe[0].style.display = 'none';
   } else {
     console.log("Checkbox is not checked..");
-iframe[0].style.display = 'block';
+    iframe = document.getElementsByTagName('iframe');
+    iframe[0].style.display = 'block';
+    document.getElementsByClassName("page1")[0].getElementsByClassName("navigation-buttons")[0].style.display = "none";
+
   }
 });
  

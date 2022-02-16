@@ -57,3 +57,12 @@ iframe[0].style.display = 'block';
 });
  
 </script>
+```
+
+### Indsæt iframe med externkey
+
+Skal indsættes som Expression 
+
+```html
+"<iframe style='width:100%;height:800px;' src='https://urlforiframe.tld/something/?userid=" + [respondent/externkey] + "'></iframe>"
+```
